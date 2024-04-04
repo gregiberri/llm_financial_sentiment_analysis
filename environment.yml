@@ -1,0 +1,30 @@
+name: llm_sentiment
+channels:
+  - base
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies: 
+  - python=3.11.7
+  - pip
+  - jupyterlab
+  - pandas
+  - langchain
+  - numpy
+  - pytorch
+  - pytorch-cuda=11.8
+  - transformers
+  - openai
+  - matplotlib
+  - openai
+  - pydantic
+  - huggingface_hub
+  - transformers=4.30
+  - accelerate
+  - bitsandbytes
+  - einops
+  - pypdf
+  - tiktoken
+  - faiss-gpu
+  - pip: 
+    - langchainhub

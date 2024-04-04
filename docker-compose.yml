@@ -1,0 +1,13 @@
+version: '3.0'
+services: 
+  llm_sentiment: 
+    image: llm_sentiment
+    build:
+      context: .
+    container_name: llm_sentiment
+    ports: 
+      - "5577:8888"
+      - "5578:22"
+    runtime: nvidia
+    volumes: 
+      - ./:/code
