@@ -11,3 +11,24 @@ services:
     runtime: nvidia
     volumes: 
       - ./:/code
+    depends_on:
+      - oobabooga
+  oobabooga:
+    image: oobabooga
+    container_name: oobabooga
+    build:
+      context: oobabooga
+      dockerfile: Dockerfile
+    command: ["TheBloke/Llama-2-13B-GPTQ", "AutoGPTQ"]
+    runtime: nvidia
+    volumes:
+      - ./models:/models
+    ports:
+      - 7860:7860
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
