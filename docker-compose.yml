@@ -25,6 +25,8 @@ services:
       - ./models:/models
     ports:
       - 7860:7860
+      - 5000:5000
+      - 5001:5001
     deploy:
       resources:
         reservations:
