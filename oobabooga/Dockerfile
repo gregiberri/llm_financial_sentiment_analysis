@@ -20,6 +20,8 @@ RUN git clone https://github.com/oobabooga/text-generation-webui .
 RUN git checkout 7b9ad64
 
 RUN micromamba run -n textgen pip install -r requirements.txt
+RUN micromamba run -n textgen pip uninstall -y auto-gptq
+RUN micromamba run -n textgen pip install auto-gptq
 RUN micromamba install -n textgen -c "nvidia/label/cuda-12.0.0" cuda-toolkit -y
 
 RUN micromamba run -n textgen pip uninstall llama-cpp-python -y
