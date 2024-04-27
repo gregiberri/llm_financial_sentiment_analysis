@@ -1,4 +1,2 @@
 # do not upload large model files to git
-data/*
-!data/extracted_data.csv 
 models/*
