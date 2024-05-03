@@ -33,5 +33,6 @@ dependencies:
   - joblib
   - spacy
   - textblob
+  - seaborn
   - pip: 
     - langchainhub

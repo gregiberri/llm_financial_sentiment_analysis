@@ -29,5 +29,7 @@ RUN mamba env create -f /environment.yml
 RUN curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | bash
 RUN apt install -y git-lfs && git lfs install
 
+RUN mamba run -n llm_sentiment pip cache purge && mamba clean --all -y
+
 ENTRYPOINT ["mamba", "run", "--no-capture-output", "-n", "llm_sentiment"]
 CMD ["jupyter", "lab", "--allow-root", "--debug", "--ip=0.0.0.0", "--NotebookApp.token=''", "--NotebookApp.password=''", "--notebook-dir=/code"]
