@@ -1,4 +1,5 @@
 # LLM for Financial Sentiment Analysis
+The goal of the project is to investigate the possibility of using commercial LLMs for sentiment prediction from full financial news articles to improve stock price prediction.
 ## Prerequisites
 
 ### Build the docker container
